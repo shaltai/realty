@@ -1,0 +1,67 @@
+// Lato
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Light.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("/fonts/Lato-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+// Raleway
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url("/fonts/Raleway-Bold.woff") format("woff");
+    font-weight: 700;
+}
+
+// Variables
+
+$font-heading: Raleway, sans-serif;
+$font-size-base: 1rem;
+$kerning-small: 0.2rem;
+
+// Typography
+
+.heading {
+    display: flex;
+    width: 100%;
+
+    &_subheader {
+        margin-bottom: 0.5rem;
+        font-family: Raleway, sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.125rem;
+        text-transform: uppercase;
+        letter-spacing: $kerning-small;
+    }
+
+    &_filter-item {
+        font-size: 1rem;
+        line-height: 1rem;
+        padding-bottom: .5rem;
+        color: $grey_dark;
+    }
+
+    &_buy {
+        color: $grey_darkest;
+    }
+}

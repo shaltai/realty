@@ -1,0 +1,89 @@
+.buy {
+    &__card {
+        margin-bottom: 3rem;
+    }
+    &__content {
+        padding-top: 8.5rem;
+    }
+    &__filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+// Нижнее меню
+.link {
+    &_sort {
+        color: $main_light;
+        &::before {
+            background-image: url(/ico/icon__sort_buy.svg);
+        }
+    }
+
+    &_map {
+        color: $main_light;
+        &::before {
+            background-image: url(/ico/icon__map_buy.svg);
+        }
+    }
+
+    &_filter-search {
+        color: #fff;
+        &::before {
+            background-image: url(/ico/icon__search_light.svg);
+        }
+    }
+
+    &_filter-full {
+        color: #fff;
+        &::before {
+            background-image: url(/ico/icon__sort_light.svg);
+        }
+    }
+
+    &_filter-map {
+        color: #fff;
+        &::before {
+            background-image: url(/ico/icon__map_light.svg);
+        }
+    }
+}
+
+.menu-bottom {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+    background-color: #fff;
+    box-shadow: 0 -0.125rem 0.5rem rgba(56, 65, 62, 0.16);
+
+    &_transparent {
+        @extend %container;
+        // width: calc(100% - 2rem);
+        // margin-left: 1rem;
+        // margin-right: 1rem;
+        margin-bottom: 1rem;
+        background-color: inherit;
+        box-shadow: none;
+    }
+
+    &_filled {
+        background-color: $main_light;
+    }
+}
+
+
+
+
+
+
+
+//

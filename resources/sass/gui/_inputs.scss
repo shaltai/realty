@@ -1,0 +1,87 @@
+// Чекбокс
+.checkbox, .radio {
+    position: relative;
+    cursor: pointer;
+
+    &__input {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &__mark {
+        position: relative;
+        padding-left: 1.5rem;
+        color: $grey_dark;
+        font-weight: 300;
+        line-height: 1rem;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0%;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            border: .063rem solid $grey_mid;
+            background-color: #fff;
+            border-radius: .125rem;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: .5rem;
+            transform: translate(-50%, -50%);
+            width: .001rem;
+            height: .001rem;
+            background-color: transparent;
+            border-radius: .125rem;
+        }
+    }
+}
+
+.radio__mark::before,
+.radio__mark::after {
+    border-radius: 50%;
+}
+
+.radio__input:checked~.radio__mark::after,
+.checkbox__input:checked~.checkbox__mark::after {
+    width: .5rem;
+    height: .5rem;
+    background-color: $main_light;
+    transition: all .33s ease-out;
+}
+
+.radio__input:checked~.radio__mark::before,
+.checkbox__input:checked~.checkbox__mark::before {
+    border-color: $main_light;
+    transition: all .66s ease-out;
+}
+
+.text-field {
+    display: flex;
+
+    &_half {
+        width: 24%;
+    }
+
+    &__input {
+        width: 100%;
+        padding: .5rem;
+        border: solid .063rem transparent;
+        border-bottom: solid .063rem $grey_mid;
+        background: $grey_lightest;
+        &::placeholder {
+            color: $grey_dark;
+            font-size: .75rem;
+        }
+        &:not([type="range"]):focus {
+    		border: solid .063rem $grey_mid;
+	    }
+
+        &_error {
+            border: solid .063rem $error;
+        }
+    }
+}
